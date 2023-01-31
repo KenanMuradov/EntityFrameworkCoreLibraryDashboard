@@ -1,0 +1,137 @@
+﻿<Window x:Class="EntityFrameworkCoreLibraryDashboard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:syncfusion ="http://schemas.syncfusion.com/wpf"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EntityFrameworkCoreLibraryDashboard"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <syncfusion:SfNavigationDrawer x:Name="navigationDrawer" DisplayMode="Expanded" AutoChangeDisplayMode="True" ExpandedModeThresholdWidth="600">
+            
+            <syncfusion:NavigationItem Header="Books" ToolTip="Books" Command="{Binding BooksCommand}">
+                <syncfusion:NavigationItem.Icon>
+                    <Image
+                        Width="25"
+                        Height="25"
+                        Source="/StaticFiles/Images/icons8-open-book-32.png" />
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem>
+            
+        <syncfusion:NavigationItem Header="Authors" ToolTip="Authors" Command="{Binding AuthorsCommand}">
+                <syncfusion:NavigationItem.Icon>
+                    <Image
+                        Width="25"
+                        Height="25"
+                        Source="/StaticFiles/Images/icons8-hand-with-pen-50.png" />
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem>
+            
+            <syncfusion:NavigationItem Header="Categories" ToolTip="Categories" Command="{Binding CategoriesCommand}">
+                <syncfusion:NavigationItem.Icon>
+                    <Image
+                        Width="25"
+                        Height="25"
+                        Source="/StaticFiles/Images/icons8-categorize-64.png" />
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem>
+
+            <syncfusion:NavigationItem Header="Departments" ToolTip="Departments" Command="{Binding DepartmentsCommand}">
+                <syncfusion:NavigationItem.Icon>
+                    <Image
+                        Width="25"
+                        Height="25"
+                        Source="/StaticFiles/Images/icons8-department-50.png" />
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem>
+
+            <syncfusion:NavigationItem Header="Groups" ToolTip="Groups" Command="{Binding GroupsCommand}">
+                <syncfusion:NavigationItem.Icon>
+                    <Image
+                        Width="25"
+                        Height="25"
+                        Source="/StaticFiles/Images/icons8-groups-50.png" />
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem>
+
+            <syncfusion:NavigationItem Header="Faculties" ToolTip="Faculties" Command="{Binding FacultiesCommand}">
+                <syncfusion:NavigationItem.Icon>
+                    <Image
+                        Width="25"
+                        Height="25"
+                        Source="/StaticFiles/Images/free-icon-faculty-8262210.png" />
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem>
+
+            <syncfusion:NavigationItem Header="Students" ToolTip="Students" Command="{Binding StudentsCommand}">
+                <syncfusion:NavigationItem.Icon>
+                    <Image
+                        Width="25"
+                        Height="25"
+                        Source="/StaticFiles/Images/icons8-students-50.png" />
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem>
+
+            <syncfusion:NavigationItem Header="Teachers" ToolTip="Teachers" Command="{Binding TeachersCommand}">
+                <syncfusion:NavigationItem.Icon>
+                    <Image
+                        Width="25"
+                        Height="25"
+                        Source="/StaticFiles/Images/icons8-training-50.png" />
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem>
+
+            <syncfusion:NavigationItem Header="Librarians" ToolTip="Librarians" Command="{Binding LibsCommand}">
+                <syncfusion:NavigationItem.Icon>
+                    <Image
+                        Width="25"
+                        Height="25"
+                        Source="/StaticFiles/Images/icons8-librarian-64.png" />
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem>
+
+            <syncfusion:NavigationItem Header="Themes" ToolTip="Themes" Command="{Binding ThemesCommand}">
+                <syncfusion:NavigationItem.Icon>
+                    <Image
+                        Width="25"
+                        Height="25"
+                        Source="/StaticFiles/Images/icons8-topic-96.png" />
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem>
+
+            <syncfusion:NavigationItem Header="Presses" ToolTip="Presses" Command="{Binding PressesCommand}">
+                <syncfusion:NavigationItem.Icon>
+                    <Image
+                        Width="25"
+                        Height="25"
+                        Source="/StaticFiles/Images/icons8-news-50.png" />
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem>
+
+            <syncfusion:NavigationItem Header="Teachers' Books" ToolTip="Teachers' Books" Command="{Binding T_CardsCommand}">
+                <syncfusion:NavigationItem.Icon>
+                    <Image
+                        Width="25"
+                        Height="25"
+                        Source="/StaticFiles/Images/icons8-book-shelf-50.png" />
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem>
+
+            <syncfusion:NavigationItem Header="Students' Books" ToolTip="Students' Books" Command="{Binding S_CardsCommand}">
+                <syncfusion:NavigationItem.Icon>
+                    <Image
+                        Width="25"
+                        Height="25"
+                        Source="/StaticFiles/Images/icons8-book-shelf-50.png" />
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem>
+
+            <syncfusion:SfNavigationDrawer.ContentView>
+                <DataGrid Name="DataList" CanUserAddRows="False" CanUserReorderColumns="False" CanUserDeleteRows="False"/>
+            </syncfusion:SfNavigationDrawer.ContentView>
+    </syncfusion:SfNavigationDrawer>
+
+       
+    </Grid>
+</Window>

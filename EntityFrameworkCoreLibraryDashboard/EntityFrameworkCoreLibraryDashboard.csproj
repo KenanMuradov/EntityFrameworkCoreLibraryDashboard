@@ -1,0 +1,85 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="appsettings.json" />
+		<None Remove="StaticFiles\Images\free-icon-faculty-8262210.png" />
+		<None Remove="StaticFiles\Images\icons8-book-shelf-50.png" />
+		<None Remove="StaticFiles\Images\icons8-categorize-64.png" />
+		<None Remove="StaticFiles\Images\icons8-department-50.png" />
+		<None Remove="StaticFiles\Images\icons8-groups-50.png" />
+		<None Remove="StaticFiles\Images\icons8-hand-with-pen-50.png" />
+		<None Remove="StaticFiles\Images\icons8-librarian-64.png" />
+		<None Remove="StaticFiles\Images\icons8-news-50.png" />
+		<None Remove="StaticFiles\Images\icons8-open-book-32.png" />
+		<None Remove="StaticFiles\Images\icons8-students-50.png" />
+		<None Remove="StaticFiles\Images\icons8-topic-96.png" />
+		<None Remove="StaticFiles\Images\icons8-training-50.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="StaticFiles\Images\icons8-book-shelf-50.png">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="appsettings.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="StaticFiles\Images\free-icon-faculty-8262210.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="StaticFiles\Images\icons8-categorize-64.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="StaticFiles\Images\icons8-department-50.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="StaticFiles\Images\icons8-groups-50.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="StaticFiles\Images\icons8-hand-with-pen-50.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="StaticFiles\Images\icons8-librarian-64.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="StaticFiles\Images\icons8-news-50.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="StaticFiles\Images\icons8-open-book-32.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="StaticFiles\Images\icons8-students-50.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="StaticFiles\Images\icons8-topic-96.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="StaticFiles\Images\icons8-training-50.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MaterialDesignColors" Version="2.1.1" />
+		<PackageReference Include="MaterialDesignThemes" Version="4.7.1" />
+		<PackageReference Include="MaterialDesignThemes.MahApps" Version="0.2.7" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.13" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.13" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.13">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+		<PackageReference Include="Syncfusion.SfNavigationDrawer.WPF" Version="20.4.0.44" />
+	</ItemGroup>
+
+</Project>
