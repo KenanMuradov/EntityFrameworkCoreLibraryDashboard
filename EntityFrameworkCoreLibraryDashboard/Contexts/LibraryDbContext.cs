@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,15 +15,16 @@ namespace EntityFrameworkCoreLibraryDashboard.Contexts;
 
 public class LibraryDbContext : DbContext
 {
-    private readonly string _connectionString;
-    public LibraryDbContext(string connectionString)
-    {
-        _connectionString = connectionString;
-    }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(_connectionString);
+        var configuration = new ConfigurationBuilder()
+                    .AddJsonFile("appsettings.json")
+                    .Build();
+
+        var connectionString = configuration.GetConnectionString("LibraryDb");
+
+        optionsBuilder.UseSqlServer(connectionString);
         base.OnConfiguring(optionsBuilder);
     }
 

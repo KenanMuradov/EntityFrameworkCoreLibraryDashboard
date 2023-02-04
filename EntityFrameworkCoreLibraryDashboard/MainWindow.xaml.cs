@@ -43,7 +43,7 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
         DataContext = this;
-        Configuration();
+        context= new();
         BooksCommand = new RelayCommand(ExecuteBooksCommand);
         AuthorsCommand = new RelayCommand(ExecuteAuthorsCommand);
         CategoriesCommand = new RelayCommand(ExecuteCategoriesCommand);
@@ -70,7 +70,9 @@ public partial class MainWindow : Window
     {
         var list = await context.T_Cards.ToListAsync();
 
-        DataList.ItemsSource = list.Select(x => new { x.Id,x.Id_Book,x.Id_Lib,x.Id_Teacher, x.DateOut,x.DateIn });
+        DataList.ItemsSource = list.Select(x => new { x.Id, x.Id_Book, x.Id_Lib, x.Id_Teacher, x.DateOut, x.DateIn });
+
+        ;
     }
 
     private async void ExecutePressesCommand(object? obj)
@@ -151,12 +153,4 @@ public partial class MainWindow : Window
         DataList.ItemsSource = list.Select(x => new { x.Id, x.Name, x.Pages, x.YearPress, x.Id_Category, x.Id_Press, x.Id_Author, x.Id_Theme, x.Comment, x.Quantity });
     }
 
-    private void Configuration()
-    {
-        configuration = new ConfigurationBuilder()
-                    .AddJsonFile("appsettings.json")
-                    .Build();
-
-        context = new(configuration.GetConnectionString("LibraryDb"));
-    }
 }
