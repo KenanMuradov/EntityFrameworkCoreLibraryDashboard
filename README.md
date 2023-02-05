@@ -1,2 +1,2 @@
 # **Note**
-## **Bold text**
+**Bold text**
