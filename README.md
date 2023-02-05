@@ -1,2 +1,2 @@
 # **Note**
-**Bold text**
+**To use program you must put your server name in connection string and update database**
